@@ -280,6 +280,8 @@ MonoBehaviour:
   speed: 0.25
   offscreen: 4.25
   damage: 25
+  tagsToIgnore:
+  - Player
 --- !u!114 &114918569445795792
 MonoBehaviour:
   m_ObjectHideFlags: 1
