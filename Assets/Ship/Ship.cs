@@ -9,7 +9,13 @@ public class Ship : MonoBehaviour
     public float HorizontalWall = 10f;
     public float VerticalWall = 10f;
 
-	private void Update ()
+    public Shot shotPrefab = null;
+
+    public float shotDelay = 0.75f;
+
+    private bool shootDelayOver = true;
+
+    private void Update()
     {
         Vector3 positionVector = transform.position;
         positionVector.x += HorizontalSpeed * Input.GetAxis("Horizontal");
@@ -17,5 +23,24 @@ public class Ship : MonoBehaviour
         positionVector.y += VerticalSpeed * Input.GetAxis("Vertical");
         positionVector.y = Mathf.Clamp(positionVector.y, -VerticalWall, VerticalWall);
         transform.position = positionVector;
-	}
+
+        if (Input.GetButtonDown("Fire1") || (Input.GetButton("Fire1") && shootDelayOver))
+        {
+            CreateShot();
+        }
+    }
+
+    private void CreateShot()
+    {
+        Shot shot = Instantiate(shotPrefab, shotPrefab.transform.position, Quaternion.identity);
+        shot.gameObject.SetActive(true);
+        shootDelayOver = false;
+        StartCoroutine(ShootDelay());
+    }
+
+    private IEnumerator ShootDelay()
+    {
+        yield return new WaitForSeconds(shotDelay);
+        shootDelayOver = true;
+    }
 }
