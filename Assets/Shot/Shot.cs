@@ -22,7 +22,7 @@ public class Shot : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var damageable = collision.collider.GetComponent<Damageable>();
+        var damageable = collision.gameObject.GetComponent<Damageable>();
         if (damageable != null)
         {
             damageable.Damage(damage);

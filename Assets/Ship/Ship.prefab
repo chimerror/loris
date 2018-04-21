@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 114567101669015544}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   offscreen: 4.25
-  damage: 15
+  damage: 25
 --- !u!114 &114918569445795792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+  maxHitPoints: 100
   damageExplosion: {fileID: 114265398577493954}
   destroyedExplosion: {fileID: 114770802170901696}
 --- !u!198 &198315757926237828

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     public float hitPoints = 100;
+    public float maxHitPoints = 100;
     public TimedObject damageExplosion = null;
     public TimedObject destroyedExplosion = null;
 
