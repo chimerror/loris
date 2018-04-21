@@ -10,7 +10,7 @@ public class Shot : MonoBehaviour
 
 	private void Update()
     {
-        if (transform.position.y >= offscreen)
+        if (Mathf.Abs(transform.position.y) >= offscreen)
         {
             Destroy(gameObject);
         }
@@ -23,6 +23,10 @@ public class Shot : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var damageable = collision.collider.GetComponent<Damageable>();
-        damageable.Damage(damage);
+        if (damageable != null)
+        {
+            damageable.Damage(damage);
+            Destroy(gameObject);
+        }
     }
 }
