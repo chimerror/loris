@@ -1287,8 +1287,8 @@ MonoBehaviour:
   horizontalRange: 8
   verticalRange: 3.5
   _objectsVisible: 10
-  targetObjectPercentage: 0.35
-  minimumTargetObjects: 3
+  targetObjectPercentage: 0.45
+  minimumTargetObjects: 4
   objectsToAlter: 5
 --- !u!4 &1874994840
 Transform:
