@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114918569445795792}
   - component: {fileID: 58654050347675370}
   - component: {fileID: 50373547222177860}
+  - component: {fileID: 114567101669015544}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -240,6 +241,19 @@ MonoBehaviour:
   VerticalWall: 4
   shotPrefab: {fileID: 114868371966903498}
   shotDelay: 0.05
+--- !u!114 &114567101669015544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678790379037278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981829b0e4c6b6e438d0fd66a7ef044f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnDelay: 2
+  spawnPoint: {fileID: 0}
 --- !u!114 &114770802170901696
 MonoBehaviour:
   m_ObjectHideFlags: 1

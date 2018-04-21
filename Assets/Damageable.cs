@@ -10,10 +10,12 @@ public class Damageable : MonoBehaviour
     public TimedObject destroyedExplosion = null;
 
     private SpriteRenderer _spriteRenderer = null;
+    private Respawner _respawner = null;
 
     public void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _respawner = GetComponent<Respawner>();
     }
 
     public void OnEnable()
@@ -39,6 +41,13 @@ public class Damageable : MonoBehaviour
     private IEnumerator WaitForDestroyedExplosion()
     {
         yield return new WaitForSeconds(destroyedExplosion.objectLifetime);
-        Destroy(gameObject);
+        if (_respawner == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            StartCoroutine(_respawner.Respawn());
+        }
     }
 }

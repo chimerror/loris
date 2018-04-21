@@ -236,7 +236,7 @@ Prefab:
     - target: {fileID: 114024111999575070, guid: 82f527b70fd2dd445aa4d0979c0c5e48,
         type: 2}
       propertyPath: damage
-      value: 35
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82f527b70fd2dd445aa4d0979c0c5e48, type: 2}
@@ -280,6 +280,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114567101669015544, guid: ab6278aa03c388c4da042ce59aeffa01,
+        type: 2}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1671986532}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6278aa03c388c4da042ce59aeffa01, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1671986531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1678790379037278, guid: ab6278aa03c388c4da042ce59aeffa01,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1671986532}
+  m_Layer: 0
+  m_Name: ShipSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1671986532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4482149159503408, guid: ab6278aa03c388c4da042ce59aeffa01,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1671986531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

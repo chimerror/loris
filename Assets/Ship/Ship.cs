@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Ship : MonoBehaviour
 {
     public float HorizontalSpeed = 0.25f;
@@ -12,10 +13,21 @@ public class Ship : MonoBehaviour
     public Shot shotPrefab = null;
     public float shotDelay = 0.75f;
 
+    private SpriteRenderer _spriteRenderer = null;
     private bool _shootDelayOver = true;
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
+        if (!_spriteRenderer.enabled)
+        {
+            return;
+        }
+
         Vector3 positionVector = transform.position;
         positionVector.x += HorizontalSpeed * Input.GetAxis("Horizontal");
         positionVector.x = Mathf.Clamp(positionVector.x, -HorizontalWall, HorizontalWall);
