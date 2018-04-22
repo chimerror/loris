@@ -305,6 +305,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114377575217736862, guid: 82f527b70fd2dd445aa4d0979c0c5e48,
+        type: 2}
+      propertyPath: hiddenObjectSpawner
+      value: 
+      objectReference: {fileID: 1874994839}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82f527b70fd2dd445aa4d0979c0c5e48, type: 2}
   m_IsPrefabParent: 0
@@ -827,10 +832,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1587854512443512, guid: c26ddd7b7fe9e8446be2fb1ccb0f8d31, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c26ddd7b7fe9e8446be2fb1ccb0f8d31, type: 2}
   m_IsPrefabParent: 0
@@ -999,7 +1000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 1640270967}
   horizontalRange: 9
-  spawnChance: 0.05
+  spawnChance: 0.1
 --- !u!4 &1244056582
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,6 +1153,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114954071914188266, guid: ab6278aa03c388c4da042ce59aeffa01,
+        type: 2}
+      propertyPath: hiddenObjectSpawner
+      value: 
+      objectReference: {fileID: 1874994839}
     - target: {fileID: 114567101669015544, guid: ab6278aa03c388c4da042ce59aeffa01,
         type: 2}
       propertyPath: spawnPoint
@@ -1289,6 +1295,7 @@ MonoBehaviour:
   _objectsVisible: 10
   targetObjectPercentage: 0.45
   minimumTargetObjects: 4
+  maximumTargetObjects: 8
   objectsToAlter: 5
 --- !u!4 &1874994840
 Transform:

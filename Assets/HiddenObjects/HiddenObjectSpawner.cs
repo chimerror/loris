@@ -10,6 +10,7 @@ public class HiddenObjectSpawner : MonoBehaviour
     public int _objectsVisible = 5;
     public float targetObjectPercentage = 0.25f;
     public int minimumTargetObjects = 3;
+    public int maximumTargetObjects = 8;
     public int objectsToAlter = 2;
 
     private HiddenObject[] _hiddenObjectPrefabs = null;
@@ -22,6 +23,25 @@ public class HiddenObjectSpawner : MonoBehaviour
         {
             return _targetObjects.AsReadOnly();
         }
+    }
+
+    public void AddTargetObject()
+    {
+        if (_targetObjects.Count >= maximumTargetObjects)
+        {
+            return;
+        }
+
+        int newTargetObjectIndex;
+        HiddenObject newTargetObject;
+        do
+        {
+            newTargetObjectIndex = Random.Range(0, _visibleObjects.Count - 1);
+            newTargetObject = _visibleObjects[newTargetObjectIndex];
+        } while (_targetObjects.Contains(newTargetObject));
+
+        newTargetObject.isTargetItem = true;
+        _targetObjects.Add(newTargetObject);
     }
 
     public void RemoveHiddenObject(HiddenObject hiddenObject)

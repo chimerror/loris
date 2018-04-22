@@ -35,6 +35,7 @@ public class Damageable : MonoBehaviour
         hitPoints -= points;
         if (hitPoints <= 0f && destroyedExplosion != null)
         {
+            OnDamageableDestroyed();
             _spriteRenderer.enabled = false;
             destroyedExplosion.gameObject.SetActive(true);
             StartCoroutine(WaitForDestroyedExplosion());
@@ -43,6 +44,10 @@ public class Damageable : MonoBehaviour
         {
             damageExplosion.gameObject.SetActive(true);
         }
+    }
+
+    protected virtual void OnDamageableDestroyed()
+    {
     }
 
     private IEnumerator WaitForDestroyedExplosion()

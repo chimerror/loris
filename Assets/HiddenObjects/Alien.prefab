@@ -22,13 +22,14 @@ GameObject:
   - component: {fileID: 212565958566649508}
   - component: {fileID: 58379148362525166}
   - component: {fileID: 114542228660503870}
+  - component: {fileID: 95494286300240536}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4758874547957364
 Transform:
   m_ObjectHideFlags: 1
@@ -57,6 +58,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.1}
   serializedVersion: 2
   m_Radius: 0.75
+--- !u!95 &95494286300240536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587854512443512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d49d2eff98b0aa449a1bd8029fc9b981, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114542228660503870
 MonoBehaviour:
   m_ObjectHideFlags: 1

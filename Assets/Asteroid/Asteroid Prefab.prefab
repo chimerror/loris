@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 4552373033146374}
   - component: {fileID: 212367687592585540}
   - component: {fileID: 58704757146015144}
-  - component: {fileID: 114235769702700850}
   - component: {fileID: 50824268273618758}
   - component: {fileID: 114024111999575070}
+  - component: {fileID: 114377575217736862}
   m_Layer: 0
   m_Name: Asteroid Prefab
   m_TagString: Enemy
@@ -171,21 +171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectLifetime: 0.5
---- !u!114 &114235769702700850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1384833885555782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f2e572ed6e52a48b06a4f431b9c9bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 75
-  maxHitPoints: 75
-  damageExplosion: {fileID: 114291936198960188}
-  destroyedExplosion: {fileID: 114121187856183530}
 --- !u!114 &114291936198960188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,6 +183,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectLifetime: 0.5
+--- !u!114 &114377575217736862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384833885555782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c711c4000bc18943ac376bff691300c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 75
+  maxHitPoints: 75
+  damageExplosion: {fileID: 114291936198960188}
+  destroyedExplosion: {fileID: 114121187856183530}
+  hiddenObjectSpawner: {fileID: 0}
 --- !u!198 &198296323433549330
 ParticleSystem:
   m_ObjectHideFlags: 1
