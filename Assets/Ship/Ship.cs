@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class Ship : MonoBehaviour
 {
@@ -13,12 +14,35 @@ public class Ship : MonoBehaviour
     public Shot shotPrefab = null;
     public float shotDelay = 0.75f;
 
+    public Collider2D shield = null;
+    public float shieldLifetime = 3f;
+
+    private Collider2D _collider = null;
     private SpriteRenderer _spriteRenderer = null;
     private bool _shootDelayOver = true;
 
+    public void PutUpShield()
+    {
+        StopAllCoroutines();
+        StartCoroutine(ShieldCoroutine());
+    }
+
+    public IEnumerator ShieldCoroutine()
+    {
+        shield.gameObject.SetActive(true);
+        yield return new WaitForSeconds(shieldLifetime);
+        shield.gameObject.SetActive(false);
+    }
+
     private void Awake()
     {
+        _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        Physics2D.IgnoreCollision(_collider, shield);
     }
 
     private void Update()

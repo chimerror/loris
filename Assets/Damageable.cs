@@ -26,6 +26,12 @@ public class Damageable : MonoBehaviour
 
     public void Damage(float points)
     {
+        Shield shield = GetComponentInChildren<Shield>();
+        if (shield != null)
+        {
+            return;
+        }
+
         hitPoints -= points;
         if (hitPoints <= 0f && destroyedExplosion != null)
         {

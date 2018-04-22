@@ -20,6 +20,9 @@ public class HiddenObject : MonoBehaviour
         if (isTargetItem && collision.CompareTag("Player") && Input.GetButton("Fire2"))
         {
             _hiddenObjectSpawner.RemoveHiddenObject(this);
+            Ship ship = collision.GetComponent<Ship>();
+            Debug.Assert(ship != null, "Ship component not found on object tagged Player");
+            ship.PutUpShield();
         }
     }
 }
