@@ -31,7 +31,7 @@ public class HiddenObject : MonoBehaviour
             Debug.Assert(ship != null, "Ship component not found on object tagged Player");
             if (isTargetItem)
             {
-                _hiddenObjectSpawner.RemoveHiddenObject(this);
+                StartCoroutine(HighlightCoroutine());
                 ship.PutUpShield();
             }
             else
@@ -39,5 +39,12 @@ public class HiddenObject : MonoBehaviour
                 ship.PutDownShield();
             }
         }
+    }
+
+    private IEnumerator HighlightCoroutine()
+    {
+        HighlightObject();
+        yield return new WaitForSeconds(2f);
+        _hiddenObjectSpawner.RemoveHiddenObject(this);
     }
 }
