@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212879383938325940}
   - component: {fileID: 114346306105053014}
   - component: {fileID: 95531961423586254}
+  - component: {fileID: 114491715391419594}
   m_Layer: 0
   m_Name: SpartanHelmet
   m_TagString: Untagged
@@ -88,6 +89,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTargetItem: 0
   printedName: Spartan Helmet
+--- !u!114 &114491715391419594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1746558086956340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7481ce95b76767e4d9954d13890a6b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 750
 --- !u!212 &212879383938325940
 SpriteRenderer:
   m_ObjectHideFlags: 1

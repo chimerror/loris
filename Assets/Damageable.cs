@@ -48,6 +48,11 @@ public class Damageable : MonoBehaviour
 
     protected virtual void OnDamageableDestroyed()
     {
+        var scoreable = GetComponent<Scoreable>();
+        if (scoreable != null)
+        {
+            GameManager.Instance.ScorePoints(scoreable.score);
+        }
     }
 
     private IEnumerator WaitForDestroyedExplosion()

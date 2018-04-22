@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212094859750459684}
   - component: {fileID: 114970305136134484}
   - component: {fileID: 95739304569257342}
+  - component: {fileID: 114955673401814018}
   m_Layer: 0
   m_Name: CowboyBoot
   m_TagString: Untagged
@@ -75,6 +76,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114955673401814018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1511054982359194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7481ce95b76767e4d9954d13890a6b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 750
 --- !u!114 &114970305136134484
 MonoBehaviour:
   m_ObjectHideFlags: 1

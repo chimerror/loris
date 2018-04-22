@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212803902864017834}
   - component: {fileID: 114104251604581660}
   - component: {fileID: 95215307796241032}
+  - component: {fileID: 114407710876836796}
   m_Layer: 0
   m_Name: Carousel
   m_TagString: Untagged
@@ -88,6 +89,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTargetItem: 0
   printedName: Carousel
+--- !u!114 &114407710876836796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711805596140344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7481ce95b76767e4d9954d13890a6b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 750
 --- !u!212 &212803902864017834
 SpriteRenderer:
   m_ObjectHideFlags: 1

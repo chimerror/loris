@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Scoreable))]
 public class HiddenObject : MonoBehaviour
 {
     public bool isTargetItem = false;
@@ -25,13 +26,15 @@ public class HiddenObject : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetButton("Fire2"))
+        if (collision.CompareTag("Player") && Input.GetButtonDown("Fire2"))
         {
             Ship ship = collision.GetComponent<Ship>();
             Debug.Assert(ship != null, "Ship component not found on object tagged Player");
             if (isTargetItem)
             {
                 StartCoroutine(HighlightCoroutine());
+                var scoreable = GetComponent<Scoreable>();
+                GameManager.Instance.ScorePoints(scoreable.score);
                 ship.PutUpShield();
             }
             else
