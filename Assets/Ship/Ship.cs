@@ -27,6 +27,12 @@ public class Ship : MonoBehaviour
         StartCoroutine(ShieldCoroutine());
     }
 
+    public void PutDownShield()
+    {
+        StopAllCoroutines();
+        shield.gameObject.SetActive(false);
+    }
+
     public IEnumerator ShieldCoroutine()
     {
         shield.gameObject.SetActive(true);

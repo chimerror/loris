@@ -17,12 +17,19 @@ public class HiddenObject : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (isTargetItem && collision.CompareTag("Player") && Input.GetButton("Fire2"))
+        if (collision.CompareTag("Player") && Input.GetButton("Fire2"))
         {
-            _hiddenObjectSpawner.RemoveHiddenObject(this);
             Ship ship = collision.GetComponent<Ship>();
             Debug.Assert(ship != null, "Ship component not found on object tagged Player");
-            ship.PutUpShield();
+            if (isTargetItem)
+            {
+                _hiddenObjectSpawner.RemoveHiddenObject(this);
+                ship.PutUpShield();
+            }
+            else
+            {
+                ship.PutDownShield();
+            }
         }
     }
 }
