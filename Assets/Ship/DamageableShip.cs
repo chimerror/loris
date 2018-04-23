@@ -11,7 +11,7 @@ public class DamageableShip : Damageable
         base.OnDamageableDestroyed();
         ReadOnlyCollection<HiddenObject> targetObjects = hiddenObjectSpawner.TargetObjects;
 
-        int highlightedObjectIndex = Random.Range(0, targetObjects.Count - 1);
+        int highlightedObjectIndex = Random.Range(0, targetObjects.Count);
         HiddenObject highlightedObject = targetObjects[highlightedObjectIndex];
         highlightedObject.HighlightObject();
     }

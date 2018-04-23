@@ -36,7 +36,7 @@ public class HiddenObjectSpawner : MonoBehaviour
         HiddenObject newTargetObject;
         do
         {
-            newTargetObjectIndex = Random.Range(0, _visibleObjects.Count - 1);
+            newTargetObjectIndex = Random.Range(0, _visibleObjects.Count);
             newTargetObject = _visibleObjects[newTargetObjectIndex];
         } while (_targetObjects.Contains(newTargetObject));
 
@@ -64,7 +64,7 @@ public class HiddenObjectSpawner : MonoBehaviour
             HiddenObject newObject;
             do
             {
-                newObjectIndex = Random.Range(0, _hiddenObjectPrefabs.Length - 1);
+                newObjectIndex = Random.Range(0, _hiddenObjectPrefabs.Length);
                 newObject = _hiddenObjectPrefabs[newObjectIndex];
             } while (_visibleObjects.Contains(newObject));
 
@@ -84,7 +84,7 @@ public class HiddenObjectSpawner : MonoBehaviour
                     {
                         float horizontalAlteredPosition = Random.Range(-horizontalRange, horizontalRange);
                         float verticalAlteredPosition = Random.Range(-verticalRange, verticalRange);
-                        int objectToAlterIndex = Random.Range(0, _visibleObjects.Count - 1);
+                        int objectToAlterIndex = Random.Range(0, _visibleObjects.Count);
                         HiddenObject objectToAlter = _visibleObjects[objectToAlterIndex];
                         objectToAlter.transform.position =
                             new Vector3(horizontalAlteredPosition, verticalAlteredPosition, objectToAlter.transform.position.z);
