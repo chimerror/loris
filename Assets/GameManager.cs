@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -56,6 +57,13 @@ public class GameManager : MonoBehaviour
         if (Lives <= 0)
         {
             gameOverObject.SetActive(true);
+            StartCoroutine(GameOverCoroutine());
         }
+    }
+
+    private IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("TitleScreen");
     }
 }
