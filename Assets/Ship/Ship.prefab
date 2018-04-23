@@ -78,8 +78,8 @@ GameObject:
   - component: {fileID: 114522337556096550}
   - component: {fileID: 58654050347675370}
   - component: {fileID: 50373547222177860}
-  - component: {fileID: 114567101669015544}
   - component: {fileID: 114954071914188266}
+  - component: {fileID: 114054824529993738}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -280,6 +280,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.13
+--- !u!114 &114054824529993738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678790379037278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844b616a8618aa641a6fcd87621eb6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnDelay: 2
+  spawnPoint: {fileID: 0}
 --- !u!114 &114265398577493954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,19 +324,6 @@ MonoBehaviour:
   shotDelay: 0.05
   shield: {fileID: 58608913000036976}
   shieldLifetime: 2.5
---- !u!114 &114567101669015544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1678790379037278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981829b0e4c6b6e438d0fd66a7ef044f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnDelay: 2
-  spawnPoint: {fileID: 0}
 --- !u!114 &114760346293585852
 MonoBehaviour:
   m_ObjectHideFlags: 1

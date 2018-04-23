@@ -7,11 +7,11 @@ public class FixedRespawner : Respawner
 
     public override IEnumerator Respawn()
     {
-        yield return base.Respawn();
         if (spawnPoint != null)
         {
             transform.position = spawnPoint.position;
         }
+        yield return base.Respawn();
     }
 
 }

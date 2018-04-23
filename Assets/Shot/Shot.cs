@@ -32,8 +32,14 @@ public class Shot : MonoBehaviour
         var damageable = collision.gameObject.GetComponent<Damageable>();
         if (damageable != null)
         {
-            damageable.Damage(damage);
-            Destroy(gameObject);
+            var spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+            Debug.Assert(spriteRenderer != null, "Could not get SpriteRenderer from Damageable");
+
+            if (spriteRenderer.enabled)
+            {
+                damageable.Damage(damage);
+                Destroy(gameObject);
+            }
         }
     }
 }
